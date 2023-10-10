@@ -15,10 +15,10 @@
     <h3>Redirecting...</h3>
     <script>
         var url = window.location.href;
-        var path = url.split("/");
+        var path = new URL(url).pathname;
 
         window.onload = function() {
-            window.location.href = "https://mingsutilities.com/" + path[path.length - 1];
+            window.location.href = "https://mingsutilities.com/" + path;
         }
     </script>
 </body>
